@@ -5,3 +5,4 @@ ouch-aarch64-linux-musl
 *.translation
 .DS_Store
 Thumbs.db
+./addons
