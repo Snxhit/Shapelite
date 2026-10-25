@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c1oiaduuuf60m"]
 
-[ext_resource type="Script" uid="uid://gxnh3bvsfpnr" path="res://scenes/projectile.gd" id="1_q3m7n"]
+[ext_resource type="Script" uid="uid://gxnh3bvsfpnr" path="res://scripts/projectile.gd" id="1_6q2a6"]
 [ext_resource type="Texture2D" uid="uid://bnplhfqv3v8mw" path="res://assets/bullet4.png" id="2_q3m7n"]
 [ext_resource type="AudioStream" uid="uid://cpci8nm5lx13b" path="res://sounds/laserShoot.wav" id="3_softn"]
 [ext_resource type="AudioStream" uid="uid://dk5t424sb1htj" path="res://sounds/hitHurt.wav" id="4_6q2a6"]
@@ -11,7 +11,7 @@ points = PackedVector2Array(-289.99997, 190, 289.99997, 189.99997, -8.305164e-06
 [node name="Projectile" type="Area2D" unique_id=1901188318]
 z_index = -1
 scale = Vector2(0.1, 0.09)
-script = ExtResource("1_q3m7n")
+script = ExtResource("1_6q2a6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=947065762]
 texture = ExtResource("2_q3m7n")
