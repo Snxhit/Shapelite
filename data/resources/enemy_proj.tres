@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ProjectileData" format=3 uid="uid://b28w7kvjiv3w7"]
+
+[ext_resource type="Script" uid="uid://c1o8nhamqhrof" path="res://data/data_definitions/projectile_data.gd" id="1_fur3c"]
+[ext_resource type="Texture2D" uid="uid://d0xjwhw5kajic" path="res://assets/enemyProjectile.png" id="2_a7nxt"]
+
+[resource]
+script = ExtResource("1_fur3c")
+texture = ExtResource("2_a7nxt")
+dmg = 1
+collision_mask = 2
+metadata/_custom_type_script = "uid://c1o8nhamqhrof"

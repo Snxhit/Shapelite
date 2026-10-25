@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c1oiaduuuf60m"]
+
+[ext_resource type="Script" uid="uid://gxnh3bvsfpnr" path="res://scenes/projectile.gd" id="1_q3m7n"]
+[ext_resource type="Texture2D" uid="uid://bnplhfqv3v8mw" path="res://assets/bullet4.png" id="2_q3m7n"]
+[ext_resource type="AudioStream" uid="uid://cpci8nm5lx13b" path="res://sounds/laserShoot.wav" id="3_softn"]
+[ext_resource type="AudioStream" uid="uid://dk5t424sb1htj" path="res://sounds/hitHurt.wav" id="4_6q2a6"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_softn"]
+points = PackedVector2Array(-289.99997, 190, 289.99997, 189.99997, -8.305164e-06, -189.99998)
+
+[node name="Projectile" type="Area2D" unique_id=1901188318]
+z_index = -1
+scale = Vector2(0.1, 0.09)
+script = ExtResource("1_q3m7n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=947065762]
+texture = ExtResource("2_q3m7n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=941487276]
+rotation = 1.5707964
+shape = SubResource("ConvexPolygonShape2D_softn")
+debug_color = Color(0.96361893, 0, 0.50049096, 0.41960785)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1871096267]
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="." unique_id=1254146708]
+stream = ExtResource("3_softn")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=815472654]
+stream = ExtResource("4_6q2a6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exit"]
+[connection signal="finished" from="HitSound" to="." method="_on_hit_sound_finished"]

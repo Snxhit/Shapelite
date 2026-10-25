@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://plk3thbud44m"]
+
+[ext_resource type="Script" uid="uid://dhsoya4x63lfw" path="res://dmg_numbers.gd" id="1_bhj6t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bhj6t"]
+font_size = 80
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(-5, 5)
+
+[node name="Marker2D" type="Marker2D" unique_id=862159814]
+script = ExtResource("1_bhj6t")
+
+[node name="Label" type="Label" parent="." unique_id=420276087]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "132"
+label_settings = SubResource("LabelSettings_bhj6t")

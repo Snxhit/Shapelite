@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://boim1582ceb1a"]
+
+[ext_resource type="Script" uid="uid://dixt40kkjisqn" path="res://data/data_definitions/enemy_data.gd" id="1_7q773"]
+[ext_resource type="Resource" uid="uid://b28w7kvjiv3w7" path="res://data/resources/enemy_proj.tres" id="1_cooo6"]
+[ext_resource type="PackedScene" uid="uid://gaolha2mo3do" path="res://scenes/EnemyCollisionShapes/red_square_collision.tscn" id="1_cpsrg"]
+[ext_resource type="Texture2D" uid="uid://dcfq0i3tu03w4" path="res://assets/enemy1.png" id="3_cpsrg"]
+
+[resource]
+script = ExtResource("1_7q773")
+name = "Red Square"
+max_health = 20
+texture = ExtResource("3_cpsrg")
+projectile_data = ExtResource("1_cooo6")
+collision_shape = ExtResource("1_cpsrg")
+metadata/_custom_type_script = "uid://dixt40kkjisqn"

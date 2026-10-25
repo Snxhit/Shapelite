@@ -1,0 +1,7 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+ouch-aarch64-linux-musl
+*.translation
+.DS_Store
+Thumbs.db

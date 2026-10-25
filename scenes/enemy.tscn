@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c38rpforpw7lq"]
+
+[ext_resource type="Script" uid="uid://bp56i2y7ka86i" path="res://scenes/enemy.gd" id="1_5uy6h"]
+[ext_resource type="PackedScene" uid="uid://c1oiaduuuf60m" path="res://scenes/projectile.tscn" id="2_c4w8v"]
+[ext_resource type="PackedScene" uid="uid://plk3thbud44m" path="res://scenes/damage_numbers.tscn" id="4_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://c0qu3q40b4c58" path="res://assets/over.png" id="6_nenq2"]
+[ext_resource type="Texture2D" uid="uid://chxhoqejgc3ty" path="res://assets/progress.png" id="7_md484"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=930224908]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_5uy6h")
+projectile_scene = ExtResource("2_c4w8v")
+dmg_number_scene = ExtResource("4_c4w8v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1291015237]
+
+[node name="PathfindTimer" type="Timer" parent="." unique_id=553259250]
+wait_time = 2.0
+autostart = true
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=81715974]
+one_shot = true
+
+[node name="HPBarTimer" type="Timer" parent="." unique_id=746800646]
+one_shot = true
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=96903884]
+offset_left = -256.0
+offset_top = -404.0
+offset_right = 256.0
+offset_bottom = -276.0
+max_value = 10.0
+value = 4.0
+texture_over = ExtResource("6_nenq2")
+texture_progress = ExtResource("7_md484")
+
+[connection signal="timeout" from="PathfindTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="HPBarTimer" to="." method="_on_hp_bar_timer_timeout"]

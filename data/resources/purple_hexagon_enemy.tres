@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dyi0fgqqefsxm"]
+
+[ext_resource type="PackedScene" uid="uid://bcbefrrlvbnpw" path="res://scenes/EnemyCollisionShapes/purple_hexagon_collision.tscn" id="1_cgqvg"]
+[ext_resource type="Resource" uid="uid://b28w7kvjiv3w7" path="res://data/resources/enemy_proj.tres" id="1_hyagx"]
+[ext_resource type="Script" uid="uid://dixt40kkjisqn" path="res://data/data_definitions/enemy_data.gd" id="1_oula8"]
+[ext_resource type="Texture2D" uid="uid://pfandxi8d04l" path="res://assets/enemy2.png" id="3_cgqvg"]
+
+[resource]
+script = ExtResource("1_oula8")
+name = "Purple Hexagon"
+max_health = 20
+speed = 500
+texture = ExtResource("3_cgqvg")
+projectile_data = ExtResource("1_hyagx")
+collision_shape = ExtResource("1_cgqvg")
+metadata/_custom_type_script = "uid://dixt40kkjisqn"

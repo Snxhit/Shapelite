@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bcbefrrlvbnpw"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_ht0sa"]
+points = PackedVector2Array(0, -240, 208, -120, 208, 120, 0, 240, -210, 118, -208, -120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" unique_id=1675349344]
+shape = SubResource("ConvexPolygonShape2D_ht0sa")
+debug_color = Color(1, 1, 1, 1)

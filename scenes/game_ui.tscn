@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cn7sf6s2uu3gr"]
+
+[ext_resource type="Texture2D" uid="uid://c0qu3q40b4c58" path="res://assets/over.png" id="1_rns2u"]
+[ext_resource type="Texture2D" uid="uid://upq6r722n0gp" path="res://assets/progress-player.png" id="2_u001w"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=347261206]
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=277203246]
+offset_left = 728.0
+offset_top = 918.0
+offset_right = 1240.0
+offset_bottom = 1046.0
+value = 86.0
+texture_over = ExtResource("1_rns2u")
+texture_progress = ExtResource("2_u001w")

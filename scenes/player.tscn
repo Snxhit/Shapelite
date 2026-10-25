@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c7y4m6dk2yiie"]
+
+[ext_resource type="Script" uid="uid://5guvvr8oq0b" path="res://scripts/char_controller.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://c1oiaduuuf60m" path="res://scenes/projectile.tscn" id="2_dqkch"]
+[ext_resource type="Resource" uid="uid://bnfn154bd1a4w" path="res://data/resources/player_proj.tres" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://d3lva2aaf3516" path="res://assets/player2.png" id="4_dqkch"]
+[ext_resource type="PackedScene" uid="uid://plk3thbud44m" path="res://scenes/damage_numbers.tscn" id="4_qlg0r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7u77a"]
+radius = 235.01328
+
+[node name="Player" type="CharacterBody2D" unique_id=564529741]
+position = Vector2(-0.99999994, 0)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_g2els")
+projectile_scene = ExtResource("2_dqkch")
+projectile_data = ExtResource("3_dqkch")
+dmg_number_scene = ExtResource("4_qlg0r")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750071329]
+shape = SubResource("CircleShape2D_7u77a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=390240022]
+texture = ExtResource("4_dqkch")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1396985719]
+one_shot = true
